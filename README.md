@@ -93,3 +93,4 @@ http://my-app.ingress.local:31979/index
 ## Configuration has been tested on:
 
 - OSX
+- Windows
