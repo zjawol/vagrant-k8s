@@ -84,7 +84,7 @@ Vagrant.configure("2") do |config|
     ln -s /usr/local/kubectx/kubectx /usr/local/bin/kubectx
     ln -s /usr/local/kubectx/kubens /usr/local/bin/kubens
     source <(kubectl completion bash) # setup autocomplete in bash into the current shell, bash-completion package should be installed first.
-    echo "source <(kubectl completion bash)" >> /vagrant/.bashrc # add autocomplete permanently to your bash shell.
+    echo "source <(kubectl completion bash)" >> /home/vagrant/.bashrc # add autocomplete permanently to your bash shell.
     echo "alias k=kubectl" >> /home/vagrant/.bash_aliases
     runuser -l vagrant -c "complete -F __start_kubectl k"
     kubectl taint node --all node-role.kubernetes.io/master:NoSchedule- # allow to run pods on master
