@@ -1,2 +1,4 @@
-apps/*
-k8s-deployments/*
+.vagrant
+
+apps/
+k8s-deployments/
