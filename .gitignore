@@ -1,4 +1,6 @@
 .vagrant
+.DS_store
+
 
 apps/
 k8s-deployments/

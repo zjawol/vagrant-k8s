@@ -9,7 +9,15 @@
 
 1. Clone repository into you host. 
 2. Install required software including vagrant plugin.
+```
+# To install vagrant plugin run following command
+
+vagrant plugin install vagrant_reboot_linux
+```
 3. You can copy app apps into apps folder and then k8s deployment files into k8s-deployment folder. These two folders will be mounted into vagrant instance into "/vagrant_data" folder.
+
+Please note that if you use Windows and all your apps activity happening on VMs you have to copy you rsa key into you vagrant instance to be able to "git clone" apps to your vagrant instance. 
+Or you can install https://git-scm.com/download/gui/windows and configure on your Windows and then you can clone all apps from Windows level. 
 
 ## Create/stop/reload/destroy instance
 
@@ -89,6 +97,10 @@ Vagrantfile
 Now you should be able to access you application via browser
 
 http://my-app.ingress.local:31979/index
+
+Be aware that with following configuration only application via port 80 and 443 are accessible from your local machine. If you would like to open more ports feel free to modify ingress configuration.
+
+
 
 
 ## Configuration has been tested on:
